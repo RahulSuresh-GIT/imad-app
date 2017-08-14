@@ -1,17 +1,82 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
-    <head>
-        <link href="/ui/style.css" rel="stylesheet" />
-    </head>
-    <body>
-        <div class="center">
-            <img src="/ui/madi.png" class="img-medium"/>
-        </div>
-        <br>
-        <div class="center text-big bold">
-            Hi! I am your webapp.
-        </div>
-        <script type="text/javascript" src="/ui/main.js">
-        </script>
-    </body>
-</html>
+<head>
+
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<title>My Profile</title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+
+	<style type="text/css">
+		body
+		{
+			margin-top:20px;
+			background: #333;
+			color:white;
+		}
+		.super
+		{
+			font-size: 28px;
+		}
+
+	</style>
+</head>
+
+<body>
+	<div class="container">
+		<div class="col-md-6 offset-md-3">
+			<h1 class="display-4 text-center mb-3">My Profile<sup class="super">1.0</sup></h1>
+
+			<div id="cards">
+				<div class="card card-success mb-2">
+					<div class="card-block">
+						<h4>Year of Study:</h4>
+						<div id="year">
+							<p>II</p>
+						</div>
+					</div>
+				</div>
+				<div class="card card-primary mb-2">
+					<div class="card-block">
+						<h4>Branch:</h4>
+						<div id="branch">
+							<p>Computer Science & Engineering</p>
+						</div>
+					</div>
+				</div>
+				<div class="card card-danger mb-2">
+					<div class="card-block">
+						<h4>Interests:</h4>
+						<div id="interest">
+							<p> I love technology, android and aviation! <br> My creations - <br> <a href="https://www.youtube.com/c/TechInfinityOfficial" style="color:#33cc33"><b>1) Youtube Channel</b></a><br>	<a href="https://play.google.com/store/apps/details?id=com.rahul.edge" style="color:#33cc33"><b>2) Play Store App</b></a>												<br><a style="color:#fff">And some web dev, graphic designing, etc...</a>
+							</div>
+						</div>
+					</div>
+
+				</div>
+
+			</div>
+
+		</div>
+		<p class="text-center">Developed with <i id="heart" class="fa" aria-hidden="true" style="color:red"></i> by Rahul</a> </p>
+		<script>
+			function heartAnim()
+			{
+				heart=document.getElementById('heart');
+				heart.innerHTML="&#xf004;";
+				setTimeout(function(){
+
+					heart.innerHTML="&#xf08a;";
+				},1000);
+
+			}
+
+			heartAnim();
+			setInterval(heartAnim,2000);
+		</script>
+
+
+	</body>
+
+	</html>
